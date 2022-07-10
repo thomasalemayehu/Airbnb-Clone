@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        airbnbRed: "#fca5a5",
+        primary: "#fca5a5",
+        accent: "#a855f7",
       },
     },
   },

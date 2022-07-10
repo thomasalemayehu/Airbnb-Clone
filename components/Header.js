@@ -30,7 +30,7 @@ function Header() {
           className=" flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400"
           placeholder="Start your search"
         />
-        <SearchIcon className="hidden md:inline-flex h-8 bg-airbnbRed text-white rounded-full p-2 cursor-pointer md:mx-2" />
+        <SearchIcon className="hidden md:inline-flex h-8 bg-primary text-white rounded-full p-2 cursor-pointer md:mx-2" />
       </div>
 
       {/* Nav */}
