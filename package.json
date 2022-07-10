@@ -9,9 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.6",
+    "@tailwindcss/line-clamp": "^0.4.0",
+    "autoprefixer": "^10.4.7",
     "next": "12.2.2",
+    "postcss": "^8.4.14",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "tailwindcss": "^3.1.5"
   },
   "devDependencies": {
     "eslint": "8.19.0",
