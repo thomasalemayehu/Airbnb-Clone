@@ -3,8 +3,11 @@ import Image from "next/image";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 import SmallCard from "../components/SmallCard";
+import MediumCard from "../components/MediumCard";
+import LargeCard from "../components/LargeCard";
+import Footer from "../components/Footer";
 
-export default function Home({ exploreData }) {
+export default function Home({ exploreData, liveData }) {
   return (
     <div>
       <Head>
@@ -20,29 +23,39 @@ export default function Home({ exploreData }) {
       <main className="max-w-7xl mx-auto px-8 sm:px-16">
         {/* Small Cards */}
         <section className="pt-6">
-          <h2 className="text-4xl font-semibold pb-5">Explore Nearby</h2>
+          <h2 className="text-3xl font-semibold pb-5">Explore Nearby</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {exploreData?.map(({ img, location, distance }, index) => (
+              <SmallCard
+                key={index}
+                image={img}
+                location={location}
+                distance={distance}
+              />
+            ))}
+          </div>
         </section>
 
         {/* Medium Sections */}
         <section>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {exploreData?.map(({ img, location, distance }, index) => (
-              <h1 key={index}>
-                {
-                  <SmallCard
-                    image={img}
-                    location={location}
-                    distance={distance}
-                  />
-                }
-              </h1>
+          <h2 className="text-3xl font-semibold py-10">Live Anywhere</h2>
+
+          <div className="flex space-x-6 overflow-x-scroll overflow-y-hidden scrollbar-hide p-3 -m-3">
+            {liveData?.map(({ img, title }, index) => (
+              <MediumCard key={index} image={img} title={title} />
             ))}
           </div>
         </section>
 
         {/* Large Cards */}
-        <section></section>
+        <LargeCard
+          title="The Greatest Outdoors"
+          description="Wishlists curated by Airbnb"
+          buttonText="Get Inspired"
+        />
       </main>
+
+      <Footer />
     </div>
   );
 }
@@ -90,9 +103,18 @@ export async function getStaticProps() {
       distance: "2-hour drive",
     },
   ];
+
+  const liveData = [
+    { img: "https://links.papareact.com/2io", title: "Outdoor getaways" },
+    { img: "https://links.papareact.com/q7j", title: "Unique stays" },
+    { img: "https://links.papareact.com/s03", title: "Entire homes" },
+    { img: "https://links.papareact.com/8ix", title: "Pet allowed" },
+  ];
+
   return {
     props: {
       exploreData,
+      liveData,
     },
   };
 }
