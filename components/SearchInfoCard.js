@@ -16,7 +16,7 @@ function SearchInfoCard({
 }) {
   return (
     <div className="flex py-8 px-4 flex-col md:flex-row mx-auto cursor-pointer  hover:opacity-90 hover:shadow-lg transition duration-200 ease-out">
-      <div className="relative h-48 w-80 md:h-52 md:w-80 flex-shrink bg-gray-100 rounded-lg mb-3 md:mb-0">
+      <div className="relative h-48 w-72 md:h-52 md:w-60 flex-shrink bg-gray-100 rounded-lg mb-3 md:mb-0">
         <Image
           src={image}
           layout="fill"

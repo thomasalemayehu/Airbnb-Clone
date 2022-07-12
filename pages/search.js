@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import { useRouter } from "next/router";
 import { format } from "date-fns";
 import SearchInfoCard from "../components/SearchInfoCard";
+import LiveMap from "../components/LiveMap";
 
 function Search({ searchLocations }) {
   // get info from params
@@ -79,6 +80,11 @@ function Search({ searchLocations }) {
               />
             )
           )}
+        </section>
+
+        {/* Map */}
+        <section className="hidden xl:inline-flex xl:min-w-[600px]">
+          <LiveMap searchLocations={searchLocations} />
         </section>
       </main>
 

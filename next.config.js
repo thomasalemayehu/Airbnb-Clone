@@ -7,6 +7,10 @@ const nextConfig = {
     loader: "akamai",
     path: "",
   },
+  env: {
+    mapBoxPublicKey:
+      "pk.eyJ1IjoidGhvbWFzYWxlbWF5ZWh1IiwiYSI6ImNsNWkwY3RjdTAzamUzY3BhOGd4cHVmb2EifQ.kXaXfrOXxg39ATl5SJIeRw",
+  },
 };
 
 module.exports = nextConfig;
