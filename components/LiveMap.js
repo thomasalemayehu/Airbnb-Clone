@@ -10,6 +10,12 @@ function LiveMap({ searchLocations }) {
   }));
   const centerCoordinate = getCenter(coordinates);
 
+  const [hoverLocation, setHoverLocation] = useState({
+    long: 0,
+    lat: 0,
+    title: "",
+  });
+
   const [viewState, setViewState] = useState({
     width: "100%",
     height: "100%",
@@ -18,6 +24,8 @@ function LiveMap({ searchLocations }) {
     zoom: 13,
   });
 
+  console.log(hoverLocation);
+
   return (
     <ReactMapGL
       mapStyle="mapbox://styles/thomasalemayehu/cl5i2yfvh008p14rzw8xnekgt"
@@ -25,11 +33,31 @@ function LiveMap({ searchLocations }) {
       {...viewState}
       onMove={(evt) => setViewState(evt.viewState)}
     >
-      {searchLocations.map(({ long, lat }, index) => (
+      {/* Show markers */}
+      {searchLocations.map((item, index) => (
         <div key={index}>
-          <Marker longitude={long} latitude={lat}>
-            <p className="cursor-pointer text-2xl animate-bounce">📌</p>
+          <Marker longitude={item.long} latitude={item.lat}>
+            <p
+              onClick={() => setHoverLocation(item)}
+              className="cursor-pointer text-2xl animate-bounce"
+              aria-label="push-pin"
+              role="icon"
+            >
+              📌
+            </p>
           </Marker>
+          {hoverLocation.long === item.long ? (
+            <Popup
+              closeOnClick={true}
+              onClose={() => setHoverLocation({})}
+              latitude={item.lat}
+              longitude={item.long}
+            >
+              {hoverLocation.title}
+            </Popup>
+          ) : (
+            false
+          )}
         </div>
       ))}
     </ReactMapGL>

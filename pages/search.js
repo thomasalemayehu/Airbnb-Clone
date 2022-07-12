@@ -21,14 +21,11 @@ function Search({ searchLocations }) {
       <Header
         placeHolder={
           location +
-            " | " +
-            formattedDate +
-            " | " +
-            numberOfGuests +
-            numberOfGuests >
-          1
-            ? " guests"
-            : " guest"
+          " | " +
+          formattedDate +
+          " | " +
+          numberOfGuests +
+          (numberOfGuests > 1 ? " guests" : " guest")
         }
       />
 
