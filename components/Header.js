@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { useState } from "react";
+import { useRouter } from "next/router";
 import {
   SearchIcon,
   GlobeAltIcon,
@@ -12,7 +13,8 @@ import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { DateRangePicker } from "react-date-range";
 
-function Header() {
+function Header({ placeHolder = "Start your search" }) {
+  const router = useRouter();
   const [searchInputValue, setSearchInputValue] = useState("");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
@@ -32,6 +34,18 @@ function Header() {
     key: "selection",
   };
 
+  const search = () => {
+    router.push({
+      pathname: "/search",
+      query: {
+        location: searchInputValue,
+        startDate: startDate.toISOString(),
+        endDate: endDate.toISOString(),
+        numberOfGuests: numberOfGuests,
+      },
+    });
+  };
+
   // cancel button
   const cancelSearch = () => {
     setSearchInputValue("");
@@ -43,7 +57,10 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10">
       {/* Image */}
-      <div className="relative flex items-center h-10 cursor-pointer">
+      <div
+        className="relative flex items-center h-10 cursor-pointer"
+        onClick={() => router.push("/")}
+      >
         <Image
           src="/images/Airbnb-Logo.png"
           alt="Airbnb logo"
@@ -58,7 +75,7 @@ function Header() {
         <input
           type="text"
           className=" flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400"
-          placeholder="Start your search"
+          placeholder={placeHolder}
           value={searchInputValue}
           onChange={(e) => setSearchInputValue(e.target.value)}
         />
@@ -102,7 +119,10 @@ function Header() {
           </div>
 
           <div className="flex">
-            <button className="flex-grow bg-primary py-2 rounded-md">
+            <button
+              className="flex-grow bg-primary py-2 rounded-md"
+              onClick={search}
+            >
               Search
             </button>
             <button className="flex-grow text-gray-400" onClick={cancelSearch}>
