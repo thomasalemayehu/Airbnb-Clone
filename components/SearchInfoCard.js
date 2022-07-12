@@ -15,18 +15,18 @@ function SearchInfoCard({
   latitude,
 }) {
   return (
-    <div className="flex py-8 px-4  cursor-pointer  hover:opacity-90 hover:shadow-lg transition duration-200 ease-out">
-      <div className="relative h-24 w-40 md:h-52 md:w-80 flex-shrink bg-gray-100 rounded-lg">
+    <div className="flex py-8 px-4 flex-col md:flex-row mx-auto cursor-pointer  hover:opacity-90 hover:shadow-lg transition duration-200 ease-out">
+      <div className="relative h-48 w-80 md:h-52 md:w-80 flex-shrink bg-gray-100 rounded-lg mb-3 md:mb-0">
         <Image
           src={image}
           layout="fill"
           alt={title}
           objectFit="cover"
-          className="rounded-lg"
+          className="rounded-lg mx-auto mb-100"
         />
       </div>
 
-      <div className="flex flex-col flex-grow pl-5">
+      <div className="flex flex-col flex-grow pl-0 md:pl-5">
         <div className="flex justify-between">
           <p>{location}</p>
 
