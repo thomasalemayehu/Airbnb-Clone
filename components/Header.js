@@ -13,6 +13,7 @@ import {
 import { DateRangePicker } from "react-date-range";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
+import NavMenu from "./NavMenu";
 
 function Header({ placeHolder = "Start your search" }) {
   const { data: session } = useSession();
@@ -97,60 +98,19 @@ function Header({ placeHolder = "Start your search" }) {
           onClick={() => setShowMenu(showMenu ? false : true)}
         >
           <MenuIcon className="h-6 text-primary" />
-          <UserCircleIcon className="h-6 text-primary" />
+          {session ? (
+            <img
+              loading="lazy"
+              src={session.user?.image}
+              alt={session.user?.name}
+              className="h-7 object-cover rounded-full"
+            />
+          ) : (
+            <UserCircleIcon className="h-6 text-primary" />
+          )}
         </div>
 
-        {showMenu && (
-          <div className=" bg-gray-100 absolute top-12 flex flex-col px-4 py-4 pr-12 hover:shadow-md rounded-lg transition duration-500">
-            <a
-              className="menu-link"
-              onClick={() => {
-                setShowMenu(false);
-                router.push("/bookings");
-              }}
-            >
-              Booking History
-            </a>
-            <a
-              className="menu-link"
-              onClick={() => {
-                setShowMenu(false);
-                router.push("/wishlist");
-              }}
-            >
-              Wishlist
-            </a>
-            <a
-              className="menu-link"
-              onClick={() => {
-                setShowMenu(false);
-                router.push("/discounts");
-              }}
-            >
-              Discount
-            </a>
-            <a className="menu-link" onClick={!session ? signIn : signOut}>
-              {session ? "Logout" : "Login"}
-            </a>
-
-            <div
-              className="relative flex items-center justify-center h-5 cursor-pointer mt-6"
-              onClick={() => {
-                setShowMenu(false);
-                router.push("/");
-              }}
-            >
-              <Image
-                src="/images/Airbnb-Logo.png"
-                className="mx-auto"
-                alt="Airbnb logo"
-                layout="fill"
-                objectFit="contain"
-                objectPosition="left"
-              />
-            </div>
-          </div>
-        )}
+        {showMenu && <NavMenu />}
       </div>
 
       {searchInputValue && (
