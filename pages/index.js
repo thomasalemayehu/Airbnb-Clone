@@ -24,7 +24,9 @@ export default function Home({ exploreData, liveData }) {
       <main className="max-w-7xl mx-auto px-8 sm:px-16">
         {/* Small Cards */}
         <section className="pt-6">
-          <h2 className="text-3xl font-semibold pb-5">Explore Nearby</h2>
+          <h2 className="text-3xl font-semibold pb-5 text-primary">
+            Explore Nearby
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {exploreData?.map(({ img, location, distance }, index) => (
               <SmallCard
