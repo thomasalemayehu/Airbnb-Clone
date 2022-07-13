@@ -1,21 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  items: [
-    {
-      id: "1",
-      img: "https://links.papareact.com/xqj",
-      location: "Private room in center of London",
-      title: "Stay at this spacious Edwardian House",
-      description:
-        "1 guest · 1 bedroom · 1 bed · 1.5 shared bthrooms · Wifi · Kitchen · Free parking · Washing Machine",
-      star: 4.73,
-      price: "£30 / night",
-      total: "£117 total",
-      long: -0.0022275,
-      lat: 51.5421655,
-    },
-  ],
+  items: [],
 };
 
 export const bookmarkSlice = createSlice({

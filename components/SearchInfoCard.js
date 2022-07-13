@@ -55,46 +55,74 @@ function SearchInfoCard({
     }
   };
   const addItemToBookmark = () => {
-    console.log("Adding");
-    dispatch(
-      addToBookmark({
-        id,
-        image,
-        location,
-        title,
-        description,
-        star,
-        price,
-        total,
-        longitude,
-        latitude,
-      })
-    );
-    toast.success(`${location} added to wishlist!`);
+    if (session && session.user) {
+      dispatch(
+        addToBookmark({
+          id,
+          image,
+          location,
+          title,
+          description,
+          star,
+          price,
+          total,
+          longitude,
+          latitude,
+        })
+      );
+      toast.success(`${location} added to wishlist!`);
+    } else {
+      toast.error(`Login to add ${location} to your wishlist!`);
+    }
   };
 
   const removeItemFromBookmark = () => {
-    console.log("Remove");
-    dispatch(removeFromBookmark({ id }));
-    toast.success(`${location} removed from wishlist!`);
+    if (session && session.user) {
+      dispatch(removeFromBookmark({ id }));
+      toast.success(`${location} removed from wishlist!`);
+    } else {
+      toast.error("Please Login");
+    }
   };
   return (
-    <main className="py-2 pb-4 cursor-pointer  hover:opacity-90 hover:shadow-lg transition duration-200 ease-out">
+    <main className="py-2 pb-4 r  hover:opacity-90 hover:shadow-lg transition duration-200 ease-out">
       {/* Card */}
       <div className="flex py-8 px-4 flex-col md:flex-row mx-auto ">
-        <div className="relative h-48 w-72 md:h-52 md:w-60 flex-shrink bg-primaryLight rounded-lg mb-3 md:mb-0">
+        <div
+          className="relative h-48 w-72 md:h-52 md:w-60 flex-shrink bg-primaryLight rounded-lg mb-3 md:mb-0 cursor-pointer"
+          onClick={() =>
+            router.push({
+              pathname: "/detail",
+              query: {
+                id: id,
+              },
+            })
+          }
+        >
           <Image
             src={image}
             layout="fill"
             alt={title}
             objectFit="cover"
-            className="rounded-lg mx-auto mb-100"
+            className="rounded-lg mx-auto mb-100 "
           />
         </div>
 
         <div className="flex flex-col flex-grow pl-0 md:pl-5">
           <div className="flex justify-between">
-            <p>{location}</p>
+            <p
+              className="hover:underline cursor-pointer"
+              onClick={() =>
+                router.push({
+                  pathname: "/detail",
+                  query: {
+                    id: id,
+                  },
+                })
+              }
+            >
+              {location}
+            </p>
 
             <HeartIcon
               onClick={
@@ -108,7 +136,19 @@ function SearchInfoCard({
             />
           </div>
 
-          <h4 className="text-xl">{title}</h4>
+          <h4
+            className="hover:underline cursor-pointer text-xl"
+            onClick={() =>
+              router.push({
+                pathname: "/detail",
+                query: {
+                  id: id,
+                },
+              })
+            }
+          >
+            {title}
+          </h4>
 
           <div className="border-b w-10 p-2  border-primary" />
 

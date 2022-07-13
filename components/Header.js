@@ -148,7 +148,7 @@ function Header({ placeHolder = "Start your search" }) {
 
           <div className="flex">
             <button
-              className="flex-grow bg-primary text-white py-2 rounded-md"
+              className="flex-grow bg-primary text-white py-2 rounded-md hover:shadow-md active:scale-95 active:text-white transition duration-200 ease-out"
               onClick={search}
             >
               Search
