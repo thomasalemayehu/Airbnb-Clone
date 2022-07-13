@@ -1,12 +1,19 @@
 import React from "react";
 import Image from "next/image";
 import { HeartIcon } from "@heroicons/react/outline";
+import { HeartIcon as HeartIconSolid } from "@heroicons/react/solid";
 import { StarIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
 import { addToCart } from "../slices/cartSlice";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { useSession } from "next-auth/react";
+import {
+  selectBookmarkItems,
+  addToBookmark,
+  removeFromBookmark,
+} from "../slices/bookmarkSlice";
+import { useSelector } from "react-redux";
 
 function SearchInfoCard({
   id,
@@ -23,6 +30,9 @@ function SearchInfoCard({
   const router = useRouter();
   const dispatch = useDispatch();
   const { data: session } = useSession();
+  const itemsInBookmark = useSelector(selectBookmarkItems);
+
+  const isBookmarked = itemsInBookmark.filter((item) => item.id == id);
   const addPlaceToCart = () => {
     if (session && session.user) {
       dispatch(
@@ -44,18 +54,34 @@ function SearchInfoCard({
       toast.error("Login to Add to Cart");
     }
   };
+  const addItemToBookmark = () => {
+    console.log("Adding");
+    dispatch(
+      addToBookmark({
+        id,
+        image,
+        location,
+        title,
+        description,
+        star,
+        price,
+        total,
+        longitude,
+        latitude,
+      })
+    );
+    toast.success(`${location} added to wishlist!`);
+  };
+
+  const removeItemFromBookmark = () => {
+    console.log("Remove");
+    dispatch(removeFromBookmark({ id }));
+    toast.success(`${location} removed from wishlist!`);
+  };
   return (
     <main className="py-2 pb-4 cursor-pointer  hover:opacity-90 hover:shadow-lg transition duration-200 ease-out">
       {/* Card */}
-      <div
-        className="flex py-8 px-4 flex-col md:flex-row mx-auto "
-        onClick={() =>
-          router.push({
-            pathname: "/detail",
-            query: { id: id },
-          })
-        }
-      >
+      <div className="flex py-8 px-4 flex-col md:flex-row mx-auto ">
         <div className="relative h-48 w-72 md:h-52 md:w-60 flex-shrink bg-primaryLight rounded-lg mb-3 md:mb-0">
           <Image
             src={image}
@@ -70,7 +96,16 @@ function SearchInfoCard({
           <div className="flex justify-between">
             <p>{location}</p>
 
-            <HeartIcon className="h-7 cursor-pointer" />
+            <HeartIcon
+              onClick={
+                isBookmarked.length > 0
+                  ? removeItemFromBookmark
+                  : addItemToBookmark
+              }
+              className={`h-7 cursor-pointer text-primary transition-all duration-200 ease-out ${
+                isBookmarked.length > 0 ? "fill-primary" : ""
+              }`}
+            />
           </div>
 
           <h4 className="text-xl">{title}</h4>
@@ -95,12 +130,7 @@ function SearchInfoCard({
 
       {/* Button */}
       <div className="px-4 mt-3">
-        <button
-          className="normal-button"
-          onClick={() => {
-            addPlaceToCart();
-          }}
-        >
+        <button className="normal-button" onClick={addPlaceToCart}>
           Book Now
         </button>
       </div>
