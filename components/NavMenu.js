@@ -35,7 +35,6 @@ function NavMenu() {
       <a
         className="menu-link"
         onClick={() => {
-          setShowMenu(false);
           router.push("/bookings");
         }}
       >
@@ -44,7 +43,6 @@ function NavMenu() {
       <a
         className="menu-link"
         onClick={() => {
-          setShowMenu(false);
           router.push("/wishlist");
         }}
       >
@@ -53,7 +51,6 @@ function NavMenu() {
       <a
         className="menu-link"
         onClick={() => {
-          setShowMenu(false);
           router.push("/discounts");
         }}
       >
@@ -66,7 +63,6 @@ function NavMenu() {
       <div
         className="relative flex items-center justify-center h-5 cursor-pointer mt-6"
         onClick={() => {
-          setShowMenu(false);
           router.push("/");
         }}
       >
