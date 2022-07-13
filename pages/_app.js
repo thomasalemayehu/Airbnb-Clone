@@ -5,7 +5,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 
 const progress = new ProgressBar({
   size: 4,
-  color: "#FE595E",
+  color: "#9381FF",
   className: "z-50",
   delay: 100,
 });

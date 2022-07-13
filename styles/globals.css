@@ -4,13 +4,18 @@
 
 @layer components {
   .filterPill {
-    @apply px-4 py-2 border border-red-300 rounded-full cursor-pointer hover:shadow-lg active:scale-95 active:bg-red-300 transition transform duration-100 ease-out select-none;
+    @apply px-4 py-2 border border-primary rounded-full cursor-pointer hover:shadow-lg active:scale-95 active:bg-primary transition transform duration-100 ease-out select-none;
   }
   .footer-link {
     @apply hover:cursor-pointer hover:text-primary hover:font-semibold transition duration-100 ease-out;
   }
 }
-
-.class {
-  background: #9481ff3b;
+@media screen and (max-width: 579px) {
+  .rdrDefinedRangesWrapper {
+    width: 0px !important;
+  }
+  .rdrDateRangePickerWrapper {
+    width: 100% !important;
+    overflow: hidden !important;
+  }
 }

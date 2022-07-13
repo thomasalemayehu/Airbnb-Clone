@@ -74,7 +74,7 @@ function Header({ placeHolder = "Start your search" }) {
       <div className="flex items-center border-2 rounded-full py-1 md:shadow-sm focus-within:shadow-md">
         <input
           type="text"
-          className=" flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400"
+          className=" flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400 overflow-hidden"
           placeholder={placeHolder}
           value={searchInputValue}
           onChange={(e) => setSearchInputValue(e.target.value)}
@@ -99,12 +99,18 @@ function Header({ placeHolder = "Start your search" }) {
           <DateRangePicker
             ranges={[dateSelectionRange]}
             minDate={new Date()}
-            rangeColors={["#FD5B61"]}
+            rangeColors={["#9381FF"]}
             onChange={handleDateSelect}
+            // showMonthAndYearPickers=false"
+            // direction="horizontal"
+            // showPreview={false}
+
+            // impt
+            // showDateDisplay=
           />
 
           <div className="flex items-center border-b mb-4">
-            <h2 className="text-2xl flex-grow font-semibold">
+            <h2 className="text-lg md:text-2xl flex-grow font-semibold">
               Number of Guests
             </h2>
 
@@ -114,18 +120,18 @@ function Header({ placeHolder = "Start your search" }) {
               value={numberOfGuests}
               onChange={handleNumberOfGuests}
               min={1}
-              className="w-12 pl-2 text-lg text-red-400 outline-none"
+              className="w-12 pl-2 text-lg text-primary outline-none"
             />
           </div>
 
           <div className="flex">
             <button
-              className="flex-grow bg-primary py-2 rounded-md"
+              className="flex-grow bg-primary text-white py-2 rounded-md"
               onClick={search}
             >
               Search
             </button>
-            <button className="flex-grow text-gray-400" onClick={cancelSearch}>
+            <button className="flex-grow text-primary" onClick={cancelSearch}>
               Cancel
             </button>
           </div>

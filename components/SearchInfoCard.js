@@ -16,7 +16,7 @@ function SearchInfoCard({
 }) {
   return (
     <div className="flex py-8 px-4 flex-col md:flex-row mx-auto cursor-pointer  hover:opacity-90 hover:shadow-lg transition duration-200 ease-out">
-      <div className="relative h-48 w-72 md:h-52 md:w-60 flex-shrink bg-gray-100 rounded-lg mb-3 md:mb-0">
+      <div className="relative h-48 w-72 md:h-52 md:w-60 flex-shrink bg-primaryLight rounded-lg mb-3 md:mb-0">
         <Image
           src={image}
           layout="fill"
@@ -35,14 +35,14 @@ function SearchInfoCard({
 
         <h4 className="text-xl">{title}</h4>
 
-        <div className="border-b w-10 p-2 border-red-600" />
+        <div className="border-b w-10 p-2  border-primary" />
 
         <p className="pt-2 text-sm text-gray-500 flex-grow">{description}</p>
 
         <div className="flex justify-between items-end pt-5">
           {/* left */}
           <p className="flex items-center space-x-1">
-            <StarIcon className="h-5 text-red-400" />
+            <StarIcon className="h-5 text-primary" />
             <span>{star}</span>
           </p>
           <div>

@@ -24,8 +24,6 @@ function LiveMap({ searchLocations }) {
     zoom: 13,
   });
 
-  console.log(hoverLocation);
-
   return (
     <ReactMapGL
       mapStyle="mapbox://styles/thomasalemayehu/cl5i2yfvh008p14rzw8xnekgt"

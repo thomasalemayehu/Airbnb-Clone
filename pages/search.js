@@ -29,14 +29,22 @@ function Search({ searchLocations }) {
         }
       />
 
-      <main className="flex">
+      <main className="flex pb-12">
         <section className="flex-grow pt-14 px-6">
           <p className="text-xs">
-            300+ Stays - {formattedDate} - for {numberOfGuests} {""}
+            300+ Stays -{" "}
+            <span className="bg-primary px-2 py-[3px] rounded-lg mr-1 hover:shadow-md hover:bg-primaryLight transition duration-300 ease-out">
+              {formattedDate.split("-")[0]}
+            </span>{" "}
+            -{" "}
+            <span className="bg-primary px-2 py-[3px] rounded-lg ml-1 hover:shadow-md hover:bg-primaryLight transition duration-300 ease-out">
+              {formattedDate.split("-")[1]}
+            </span>{" "}
+            for {numberOfGuests} {""}
             {numberOfGuests > 1 ? "guests" : "guest"}
           </p>
-          <h1 className="text-3xl font-semibold mt-2 mb-6">
-            Stays in {location}
+          <h1 className="text-3xl font-semibold mt-3 mb-6 text-primary">
+            Stays in <span className="">{location}</span>
           </h1>
 
           {/* Filters */}
