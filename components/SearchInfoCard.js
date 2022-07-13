@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { addToCart } from "../slices/cartSlice";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
+import { useSession } from "next-auth/react";
 
 function SearchInfoCard({
   id,
@@ -21,22 +22,27 @@ function SearchInfoCard({
 }) {
   const router = useRouter();
   const dispatch = useDispatch();
+  const { data: session } = useSession();
   const addPlaceToCart = () => {
-    dispatch(
-      addToCart({
-        id,
-        image,
-        location,
-        title,
-        description,
-        star,
-        price,
-        total,
-        longitude,
-        latitude,
-      })
-    );
-    toast.success(`${title} added to cart!`);
+    if (session && session.user) {
+      dispatch(
+        addToCart({
+          id,
+          image,
+          location,
+          title,
+          description,
+          star,
+          price,
+          total,
+          longitude,
+          latitude,
+        })
+      );
+      toast.success(`${title} added to cart!`);
+    } else {
+      toast.error("Login to Add to Cart");
+    }
   };
   return (
     <main className="py-2 pb-4 cursor-pointer  hover:opacity-90 hover:shadow-lg transition duration-200 ease-out">
