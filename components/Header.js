@@ -71,7 +71,7 @@ function Header({ placeHolder = "Start your search" }) {
       </div>
 
       {/* Search */}
-      <div className="flex items-center border-2 rounded-full py-1 md:shadow-sm ">
+      <div className="flex items-center border-2 rounded-full py-1 md:shadow-sm focus-within:shadow-md">
         <input
           type="text"
           className=" flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400"
@@ -87,10 +87,10 @@ function Header({ placeHolder = "Start your search" }) {
         <p className="hidden md:inline-flex cursor-pointer pl-1">
           Become a host
         </p>
-        <GlobeAltIcon className="h-6" />
-        <div className="flex items-center space-x-2 border-2 px-2 py-1 rounded-full">
-          <MenuIcon className="h-6" />
-          <UserCircleIcon className="h-6" />
+        <GlobeAltIcon className="h-6 text-primary" />
+        <div className="flex items-center space-x-2 border-2 border-primary px-2 py-1 rounded-full hover:shadow-lg transition duration-200 ease-out">
+          <MenuIcon className="h-6 text-primary" />
+          <UserCircleIcon className="h-6 text-primary" />
         </div>
       </div>
 
