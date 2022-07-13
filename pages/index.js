@@ -41,7 +41,9 @@ export default function Home({ exploreData, liveData }) {
 
         {/* Medium Sections */}
         <section>
-          <h2 className="text-3xl font-semibold py-10">Live Anywhere</h2>
+          <h2 className="text-3xl font-semibold mt-6 py-8 text-primary">
+            Live Anywhere
+          </h2>
 
           <div className="flex space-x-6 overflow-x-scroll overflow-y-hidden scrollbar-hide p-3 -m-3">
             {liveData?.map(({ img, title }, index) => (
