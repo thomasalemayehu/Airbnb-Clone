@@ -9,6 +9,9 @@
   .footer-link {
     @apply hover:cursor-pointer hover:text-primary hover:font-semibold transition duration-100 ease-out;
   }
+  .menu-link {
+    @apply hover:text-primaryDark transition duration-100 ease-out hover:scale-105 mt-3 first:mt-0;
+  }
 }
 @media screen and (max-width: 579px) {
   .rdrDefinedRangesWrapper {
