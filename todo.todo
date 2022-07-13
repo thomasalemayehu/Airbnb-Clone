@@ -1,9 +1,8 @@
-1. Map PopUp
-2. Ui changes
-3. Custom Data
-4. Checkout & Book
-5. Custom 404 Page
-6. Login
-
-
-1. Keyboard search submission
+# Final
+1. Auth
+2. Menu / Headless Ui
+3. Booking & Checkout
+4. Order History
+5. Details Page (https://www.airbnb.com/rooms/32719760?adults=1&category_tag=Tag%3A675&children=0&infants=0&search_mode=flex_destinations_search&check_in=2022-07-16&check_out=2022-07-23&federated_search_id=fd10a6cd-ca8b-46fe-ae98-20463d362b19&source_impression_id=p3_1657701098_ipMpLJGzfzTYOn7L)
+5. Keyboard search submission
+6. Custom Data
