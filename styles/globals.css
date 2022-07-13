@@ -12,6 +12,12 @@
   .menu-link {
     @apply hover:text-primaryDark transition duration-100 ease-out hover:scale-105 mt-3 first:mt-0;
   }
+  .normal-button {
+    @apply bg-primary px-8 py-2 rounded-md hover:shadow-md active:scale-95 active:text-white transition duration-200 ease-out;
+  }
+  .large-button {
+    @apply normal-button text-lg py-1 w-full;
+  }
 }
 @media screen and (max-width: 579px) {
   .rdrDefinedRangesWrapper {

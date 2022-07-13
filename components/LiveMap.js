@@ -4,7 +4,7 @@ import { getCenter } from "geolib";
 
 function LiveMap({ searchLocations }) {
   //
-  const coordinates = searchLocations.map((item) => ({
+  const coordinates = searchLocations?.map((item) => ({
     longitude: item.long,
     latitude: item.lat,
   }));
@@ -32,7 +32,7 @@ function LiveMap({ searchLocations }) {
       onMove={(evt) => setViewState(evt.viewState)}
     >
       {/* Show markers */}
-      {searchLocations.map((item, index) => (
+      {searchLocations?.map((item, index) => (
         <div key={index}>
           <Marker longitude={item.long} latitude={item.lat}>
             <p

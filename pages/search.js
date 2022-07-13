@@ -51,17 +51,18 @@ function Search({ searchLocations }) {
             </h1>
 
             {/* Filters */}
-            <div className=" hidden  lg:flex gap-x-4 mb-5">
+            {/* <div className=" hidden  lg:flex gap-x-4 mb-5">
               <p className="filterPill">Cancelation Flexibility</p>
               <p className="filterPill">Type of Place</p>
               <p className="filterPill">Price</p>
               <p className="filterPill">Rooms and Beds</p>
               <p className="filterPill">More Filters</p>
-            </div>
+            </div> */}
 
-            {searchLocations.map(
+            {searchLocations?.map(
               (
                 {
+                  id,
                   img,
                   location,
                   title,
@@ -76,6 +77,7 @@ function Search({ searchLocations }) {
               ) => (
                 <SearchInfoCard
                   key={index}
+                  id={id}
                   image={img}
                   location={location}
                   title={title}
@@ -103,9 +105,9 @@ function Search({ searchLocations }) {
 }
 
 export async function getServerSideProps() {
-  // const searchResults = await fetch()
-  const searchLocations = [
+  const searchLocationsAll = [
     {
+      id: "1",
       img: "https://links.papareact.com/xqj",
       location: "Private room in center of London",
       title: "Stay at this spacious Edwardian House",
@@ -118,6 +120,7 @@ export async function getServerSideProps() {
       lat: 51.5421655,
     },
     {
+      id: "2",
       img: "https://links.papareact.com/hz2",
       location: "Private room in center of London",
       title: "Independant luxury studio apartment",
@@ -130,6 +133,7 @@ export async function getServerSideProps() {
       lat: 51.48695,
     },
     {
+      id: "3",
       img: "https://links.papareact.com/uz7",
       location: "Private room in center of London",
       title: "London Studio Apartments",
@@ -142,6 +146,7 @@ export async function getServerSideProps() {
       lat: 51.521916,
     },
     {
+      id: "4",
       img: "https://links.papareact.com/6as",
       location: "Private room in center of London",
       title: "30 mins to Oxford Street, Excel London",
@@ -154,6 +159,7 @@ export async function getServerSideProps() {
       lat: 51.472618,
     },
     {
+      id: "5",
       img: "https://links.papareact.com/xhc",
       location: "Private room in center of London",
       title: "Spacious Peaceful Modern Bedroom",
@@ -166,6 +172,7 @@ export async function getServerSideProps() {
       lat: 51.510794,
     },
     {
+      id: "6",
       img: "https://links.papareact.com/pro",
       location: "Private room in center of London",
       title: "The Blue Room In London",
@@ -178,6 +185,7 @@ export async function getServerSideProps() {
       lat: 51.51401,
     },
     {
+      id: "7",
       img: "https://links.papareact.com/8w2",
       location: "Private room in center of London",
       title: "5 Star Luxury Apartment",
@@ -190,9 +198,10 @@ export async function getServerSideProps() {
       lat: 51.521245,
     },
   ];
+
   return {
     props: {
-      searchLocations,
+      searchLocations: searchLocationsAll,
     },
   };
 }
