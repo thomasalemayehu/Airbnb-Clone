@@ -25,9 +25,11 @@ function NavMenu() {
         }}
       >
         <div className="flex-grow">Cart</div>
-        <div className="w-[20px] h-[20px] bg-yellow-400 text-center text-sm rounded-full">
-          {itemsInCart.length}
-        </div>
+        {session && (
+          <div className="w-[20px] h-[20px] bg-yellow-400 text-center text-sm rounded-full">
+            {itemsInCart.length}
+          </div>
+        )}
       </a>
 
       <a
