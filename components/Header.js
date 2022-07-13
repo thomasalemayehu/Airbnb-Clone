@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { signIn, signOut, useSession } from "next-auth/react";
 import {
   SearchIcon,
   GlobeAltIcon,
@@ -9,11 +10,12 @@ import {
   UserCircleIcon,
   UsersIcon,
 } from "@heroicons/react/solid";
+import { DateRangePicker } from "react-date-range";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
-import { DateRangePicker } from "react-date-range";
 
 function Header({ placeHolder = "Start your search" }) {
+  const { data: session } = useSession();
   const router = useRouter();
   const [showMenu, setShowMenu] = useState(false);
   const [searchInputValue, setSearchInputValue] = useState("");
@@ -127,14 +129,8 @@ function Header({ placeHolder = "Start your search" }) {
             >
               Discount
             </a>
-            <a
-              className="menu-link"
-              onClick={() => {
-                setShowMenu(false);
-                router.push("/auth");
-              }}
-            >
-              Sign out
+            <a className="menu-link" onClick={!session ? signIn : signOut}>
+              {session ? "Logout" : "Login"}
             </a>
 
             <div
