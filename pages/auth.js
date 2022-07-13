@@ -14,9 +14,9 @@ function Auth({ providers }) {
 
       <main className="h-screen w-screen  flex">
         {/* lEft */}
-        <div className="hidden lg:inline-block w-[55%] h-screen bg-primary px-8 py-6 pt-12">
-          <h1 className="text-black text-5xl font-bold mb-8">Airbnb</h1>
-          <div className="relative w-5/6 h-5/6">
+        <div className="hidden lg:inline-block w-[55%] h-screen bg-primary px-8 py-6 pt-24">
+          <h1 className="text-black text-6xl font-semibold mb-8">Airbnb</h1>
+          <div className="relative mt-24 w-4/6 h-4/6">
             <Image
               src="/images/Auth.svg"
               alt="Airbnb logo"

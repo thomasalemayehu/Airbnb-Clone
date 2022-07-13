@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Image from "next/image";
 import { useState } from "react";
@@ -14,9 +15,12 @@ import { DateRangePicker } from "react-date-range";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import NavMenu from "./NavMenu";
+import { selectItems } from "../slices/cartSlice";
+import { useSelector } from "react-redux";
 
 function Header({ placeHolder = "Start your search" }) {
   const { data: session } = useSession();
+  const itemsInCart = useSelector(selectItems);
   const router = useRouter();
   const [showMenu, setShowMenu] = useState(false);
   const [searchInputValue, setSearchInputValue] = useState("");
@@ -99,12 +103,17 @@ function Header({ placeHolder = "Start your search" }) {
         >
           <MenuIcon className="h-6 text-primary" />
           {session ? (
-            <img
-              loading="lazy"
-              src={session.user?.image}
-              alt={session.user?.name}
-              className="h-7 object-cover rounded-full"
-            />
+            <div className="relative">
+              <img
+                loading="lazy"
+                src={session.user?.image}
+                alt={session.user?.name}
+                className="h-8 object-cover rounded-full"
+              />
+              <p className="absolute top-0 left-5 bg-yellow-400 z-10 w-[16px] h-[16px] rounded-full text-center text-xs">
+                {itemsInCart.length}
+              </p>
+            </div>
           ) : (
             <UserCircleIcon className="h-6 text-primary" />
           )}
@@ -120,12 +129,6 @@ function Header({ placeHolder = "Start your search" }) {
             minDate={new Date()}
             rangeColors={["#9381FF"]}
             onChange={handleDateSelect}
-            // showMonthAndYearPickers=false"
-            // direction="horizontal"
-            // showPreview={false}
-
-            // impt
-            // showDateDisplay=
           />
 
           <div className="flex items-center border-b mb-4">

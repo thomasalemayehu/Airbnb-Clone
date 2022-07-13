@@ -3,6 +3,9 @@ import Image from "next/image";
 import { HeartIcon } from "@heroicons/react/outline";
 import { StarIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
+import { addToCart } from "../slices/cartSlice";
+import { useDispatch } from "react-redux";
+import { toast } from "react-toastify";
 
 function SearchInfoCard({
   id,
@@ -17,19 +20,36 @@ function SearchInfoCard({
   latitude,
 }) {
   const router = useRouter();
-
+  const dispatch = useDispatch();
+  const addPlaceToCart = () => {
+    dispatch(
+      addToCart({
+        id,
+        image,
+        location,
+        title,
+        description,
+        star,
+        price,
+        total,
+        longitude,
+        latitude,
+      })
+    );
+    toast.success(`${title} added to cart!`);
+  };
   return (
-    <main
-      className="py-2 pb-4 cursor-pointer  hover:opacity-90 hover:shadow-lg transition duration-200 ease-out"
-      onClick={() =>
-        router.push({
-          pathname: "/detail",
-          query: { id: id },
-        })
-      }
-    >
+    <main className="py-2 pb-4 cursor-pointer  hover:opacity-90 hover:shadow-lg transition duration-200 ease-out">
       {/* Card */}
-      <div className="flex py-8 px-4 flex-col md:flex-row mx-auto">
+      <div
+        className="flex py-8 px-4 flex-col md:flex-row mx-auto "
+        onClick={() =>
+          router.push({
+            pathname: "/detail",
+            query: { id: id },
+          })
+        }
+      >
         <div className="relative h-48 w-72 md:h-52 md:w-60 flex-shrink bg-primaryLight rounded-lg mb-3 md:mb-0">
           <Image
             src={image}
@@ -69,7 +89,14 @@ function SearchInfoCard({
 
       {/* Button */}
       <div className="px-4 mt-3">
-        <button className="normal-button">Book Now</button>
+        <button
+          className="normal-button"
+          onClick={() => {
+            addPlaceToCart();
+          }}
+        >
+          Book Now
+        </button>
       </div>
     </main>
   );
