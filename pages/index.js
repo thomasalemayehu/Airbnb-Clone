@@ -10,7 +10,7 @@ import Footer from "../components/Footer";
 export default function Home({ exploreData, liveData }) {
   return (
     <div>
-      <CustomHead title="Airbnb"></CustomHead>
+      <CustomHead pageTitle="Airbnb"></CustomHead>
 
       <Header />
 
