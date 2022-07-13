@@ -6,6 +6,7 @@ import Image from "next/image";
 import { CheckCircleIcon, StarIcon } from "@heroicons/react/solid";
 import LiveMap from "../components/LiveMap";
 import BookerDesk from "../components/BookerDesk";
+import Footer from "../components/Footer";
 
 function Details({
   img,
@@ -36,7 +37,7 @@ function Details({
               <Image src={img} alt={title} layout="fill" objectFit="cover" />
             </div>
 
-            <div className="flex pr-12">
+            <div className="flex pr-12 lg:pr-16 xl:pr-24">
               {/* Main Info */}
               <div className="px-3 pr-10 lg:px-12 lg:pr-[20%] flex-grow">
                 {/* location */}
@@ -77,7 +78,7 @@ function Details({
           {/* Map */}
           <div className="mt-4 px-3 pr-10">
             <h1 className="text-2xl font-bold">Location</h1>
-            <div className="w-full h-[250px] bg-red-200 mt-2 md:h-[300px] lg:h-[300px]">
+            <div className="w-full h-[250px] bg-red-200 mt-2 md:h-[320px] lg:h-[450px] xl:h-[500px]">
               <LiveMap
                 searchLocations={[
                   {
@@ -113,6 +114,8 @@ function Details({
           </div>
         </div>
       </section>
+
+      <Footer />
     </>
   );
 }
