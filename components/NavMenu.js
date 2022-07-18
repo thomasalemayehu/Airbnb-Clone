@@ -27,7 +27,7 @@ function NavMenu() {
         }}
       >
         <div className="flex-grow">Cart</div>
-        {session && (
+        {session && itemsInCart.length > 0 && (
           <div className="w-[20px] h-[20px] bg-yellow-400 text-center text-sm rounded-full">
             {itemsInCart.length}
           </div>

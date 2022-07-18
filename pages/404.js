@@ -23,7 +23,7 @@ export default function Custom404() {
             homepage.
           </p>
           <button
-            className="mt-6 bg-primary py-3 px-10 border-none text-xl shadow-md rounded-full font-bold my-3 hover:shadow-xl active:scale-90 transition duration-150 active:bg-primary active:text-white "
+            className="large-button mt-6 w-2/5 py-2 "
             onClick={() => router.push("/")}
           >
             <span>Go Back Home</span>

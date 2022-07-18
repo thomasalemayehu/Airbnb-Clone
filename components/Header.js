@@ -108,11 +108,14 @@ function Header({ placeHolder = "Start your search" }) {
                 loading="lazy"
                 src={session.user?.image}
                 alt={session.user?.name}
-                className="h-8 object-cover rounded-full"
+                onError="this.src = '/images/Profile.png'"
+                className="h-8 object-cover rounded-full overflow-x-hidden overflow-y-hidden"
               />
-              <p className="absolute top-0 left-5 bg-yellow-400 z-10 w-[16px] h-[16px] rounded-full text-center text-xs">
-                {itemsInCart.length}
-              </p>
+              {itemsInCart.length > 0 && (
+                <p className="absolute top-0 left-5 bg-yellow-400 z-10 w-[16px] h-[16px] rounded-full text-center text-xs">
+                  {itemsInCart.length}
+                </p>
+              )}
             </div>
           ) : (
             <UserCircleIcon className="h-6 text-primary" />

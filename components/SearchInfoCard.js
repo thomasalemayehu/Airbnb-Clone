@@ -4,7 +4,7 @@ import { HeartIcon } from "@heroicons/react/outline";
 import { HeartIcon as HeartIconSolid } from "@heroicons/react/solid";
 import { StarIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
-import { addToCart } from "../slices/cartSlice";
+import { addToCart, removeFromCart } from "../slices/cartSlice";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { useSession } from "next-auth/react";
@@ -26,6 +26,7 @@ function SearchInfoCard({
   total,
   longitude,
   latitude,
+  isCheckout = false,
 }) {
   const router = useRouter();
   const dispatch = useDispatch();
@@ -52,6 +53,18 @@ function SearchInfoCard({
       toast.success(`${title} added to cart!`);
     } else {
       toast.error("Login to Add to Cart");
+    }
+  };
+  const removePlaceFromCart = () => {
+    if (session && session.user) {
+      dispatch(
+        removeFromCart({
+          id,
+        })
+      );
+      toast.success(`${title} removed from cart!`);
+    } else {
+      toast.error("Login to Change to Cart");
     }
   };
   const addItemToBookmark = () => {
@@ -170,9 +183,19 @@ function SearchInfoCard({
 
       {/* Button */}
       <div className="px-4 mt-3">
-        <button className="normal-button" onClick={addPlaceToCart}>
-          Book Now
-        </button>
+        {/* Book Button */}
+        {!isCheckout && (
+          <button className="normal-button" onClick={addPlaceToCart}>
+            Book Now
+          </button>
+        )}
+
+        {/* checkout button */}
+        {isCheckout && (
+          <button className="normal-button" onClick={removePlaceFromCart}>
+            Remove
+          </button>
+        )}
       </div>
     </main>
   );
