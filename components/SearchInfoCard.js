@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import { addToCart, removeFromCart } from "../slices/cartSlice";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
+import { selectItems } from "../slices/cartSlice";
 import { useSession } from "next-auth/react";
 import {
   selectBookmarkItems,
@@ -32,25 +33,32 @@ function SearchInfoCard({
   const dispatch = useDispatch();
   const { data: session } = useSession();
   const itemsInBookmark = useSelector(selectBookmarkItems);
+  const itemsInCart = useSelector(selectItems);
 
   const isBookmarked = itemsInBookmark.filter((item) => item.id == id);
   const addPlaceToCart = () => {
     if (session && session.user) {
-      dispatch(
-        addToCart({
-          id,
-          image,
-          location,
-          title,
-          description,
-          star,
-          price,
-          total,
-          longitude,
-          latitude,
-        })
-      );
-      toast.success(`${title} added to cart!`);
+      const doesExist = itemsInCart.filter((item) => item.id == id);
+
+      if (doesExist < 1) {
+        dispatch(
+          addToCart({
+            id,
+            image,
+            location,
+            title,
+            description,
+            star,
+            price,
+            total,
+            longitude,
+            latitude,
+          })
+        );
+        toast.success(`${title} added to cart!`);
+      } else {
+        toast.warning(`${title} already in  cart!`);
+      }
     } else {
       toast.error("Login to Add to Cart");
     }

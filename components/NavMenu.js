@@ -55,14 +55,14 @@ function NavMenu() {
           </div>
         )}
       </a>
-      <a
+      {/* <a
         className="menu-link"
         onClick={() => {
           router.push("/discounts");
         }}
       >
         Discount
-      </a>
+      </a> */}
       <a className="menu-link" onClick={!session ? signIn : signOut}>
         {session ? "Logout" : "Login"}
       </a>
