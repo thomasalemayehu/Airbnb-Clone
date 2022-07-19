@@ -216,7 +216,7 @@ function SearchInfoCard({
               <p className="text-right font-light">
                 <Currency
                   currency="etb"
-                  quantity={price * total * USD_TO_ETB}
+                  quantity={price * total * USD_TO_ETB * 1.415}
                 ></Currency>
               </p>
             </div>

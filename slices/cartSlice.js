@@ -38,7 +38,7 @@ export const selectItems = (state) => state.cart.items;
 export const selectCountItems = (state) => state.basket.countedItems;
 export const selectTotal = (state) =>
   state.cart.items.reduce(
-    (totalPrice, item) => totalPrice + item.price * 53.33 * item.total,
+    (totalPrice, item) => totalPrice + item.price * 53.33 * item.total * 1.415,
     0
   );
 

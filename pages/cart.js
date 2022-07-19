@@ -13,6 +13,7 @@ import Currency from "react-currency-formatter";
 function Cart() {
   const { data: session } = useSession();
   const router = useRouter();
+  const itemsInCart = useSelector(selectItems);
 
   const sumPrice = useSelector(selectTotal);
 
@@ -96,6 +97,10 @@ function Cart() {
                   total,
                   longitude,
                   latitude,
+                  startDate,
+                  endDate,
+                  numberOfGuests,
+                  daysOfStay,
                 },
                 index
               ) => (
@@ -111,6 +116,10 @@ function Cart() {
                   total={total}
                   longitude={longitude}
                   latitude={latitude}
+                  startDate={startDate}
+                  endDate={endDate}
+                  numberOfGuests={numberOfGuests}
+                  daysOfStay={daysOfStay}
                   isCheckout={true}
                 />
               )
