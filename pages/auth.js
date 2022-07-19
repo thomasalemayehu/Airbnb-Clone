@@ -46,7 +46,7 @@ function Auth({ providers }) {
               key={id}
               providerName={name}
               providerId={id}
-              providerImage={`/icons/${name}.svg`}
+              providerImage={`/Icons/${name}.svg`}
             />
           ))}
         </div>
