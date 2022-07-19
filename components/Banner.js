@@ -19,7 +19,7 @@ function Banner() {
             options={{
               strings: ["Not sure where to go?"],
               autoStart: true,
-              loop: false,
+              loop: true,
             }}
           />
           {/* Not sure where to go? */}
