@@ -13,7 +13,7 @@ import Currency from "react-currency-formatter";
 function Cart() {
   const { data: session } = useSession();
   const router = useRouter();
-  const itemsInCart = useSelector(selectItems);
+
   const sumPrice = useSelector(selectTotal);
 
   return (

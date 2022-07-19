@@ -96,6 +96,9 @@ function Search({ searchLocations }) {
                   total={totalStayDays}
                   longitude={longitude}
                   latitude={latitude}
+                  startDate={startDate}
+                  endDate={endDate}
+                  numberOfGuests={numberOfGuests}
                 />
               )
             )}
@@ -133,7 +136,7 @@ export async function getServerSideProps(context) {
       description: "4 guests · 3 bedrooms · 3 beds · 2.5 baths",
       moreDescription:
         "Kitchen · Wifi · Dedicated workspace · Free parking on premises · Pets allowed · Self check-in · Ethernet connection",
-      star: 5.0,
+      star: "5.0",
       reviewCount: "7",
       price: "50",
       long: 8.954128877720558,
@@ -148,7 +151,7 @@ export async function getServerSideProps(context) {
       description: "6 guests · 3 bedrooms · 3 beds · 2 baths",
       moreDescription:
         "Kitchen · Wifi · Dedicated workspace · Free parking on premises · Furry friends welcome · City skyline view",
-      star: 5.0,
+      star: "5.0",
       reviewCount: "1",
       discountRate: "0",
       price: "62",
@@ -164,7 +167,7 @@ export async function getServerSideProps(context) {
       description: "4 guests · 2 bedrooms · 3 beds · 1 baths",
       moreDescription:
         "Kitchen · Dedicated workspace · Experienced host · Furry friends welcome ",
-      star: 5.0,
+      star: "5.0",
       reviewCount: "1",
       discountRate: "0",
       price: "80",
@@ -179,7 +182,7 @@ export async function getServerSideProps(context) {
       title: "Lovely 3 bed rental unit with free parking",
       description: "3 guests · 3 bedrooms · 3 beds · 2 baths",
       moreDescription: "Kitchen · Dedicated workspace · TV · Kitchen ",
-      star: 5.0,
+      star: "5.0",
       reviewCount: "1",
       discountRate: "10",
       price: "80",
@@ -195,7 +198,7 @@ export async function getServerSideProps(context) {
       description: "2 guests · 1 bedrooms · 1 beds · 1 bath",
       moreDescription:
         "Kitchen · Dedicated workspace · Experienced host · Kitchen ",
-      star: 5.0,
+      star: "5.0",
       reviewCount: "1",
       discountRate: "10",
       price: "57",
@@ -228,7 +231,7 @@ export async function getServerSideProps(context) {
       description: "2 guests · 1 bedroom · 1 beds · 1 bath",
       moreDescription:
         "Kitchen · Dedicated workspace · TV · Kitchen · Great location · Great check-in experience ",
-      star: 5.0,
+      star: "5.0",
       reviewCount: "1",
       discountRate: "12",
       price: "178",
@@ -244,7 +247,7 @@ export async function getServerSideProps(context) {
       description: "2 guests · 1 bedrooms · 1 beds · 1 bath",
       moreDescription:
         "Kitchen · Dedicated workspace · Experienced host · Kitchen ",
-      star: 5.0,
+      star: "5.0",
       reviewCount: "1",
       discountRate: "0",
       price: "157",

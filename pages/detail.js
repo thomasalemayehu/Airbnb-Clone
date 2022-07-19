@@ -7,6 +7,7 @@ import { CheckCircleIcon, StarIcon } from "@heroicons/react/solid";
 import LiveMap from "../components/LiveMap";
 import BookerDesk from "../components/BookerDesk";
 import Footer from "../components/Footer";
+import { selectItems } from "../slices/cartSlice";
 
 function Details({
   img,
@@ -23,7 +24,7 @@ function Details({
   reviewCount,
 }) {
   const router = useRouter();
-  const { id } = router.query;
+  const { id, startDate, endDate, numberOfGuests, daysOfStay } = router.query;
 
   return (
     <>
@@ -78,7 +79,13 @@ function Details({
               </div>
 
               {/* Booker Desk */}
-              <BookerDesk price={price} />
+              <BookerDesk
+                price={price}
+                startDate={startDate}
+                endDate={endDate}
+                numberOfGuests={numberOfGuests}
+                daysOfStay={daysOfStay}
+              />
             </div>
           </div>
 

@@ -28,6 +28,9 @@ function SearchInfoCard({
   total,
   longitude,
   latitude,
+  startDate,
+  endDate,
+  numberOfGuests,
   isCheckout = false,
 }) {
   const router = useRouter();
@@ -57,6 +60,9 @@ function SearchInfoCard({
           total,
           longitude,
           latitude,
+          startDate,
+          endDate,
+          numberOfGuests,
         })
       );
       toast.success(`${title} added to cart!`);
@@ -122,6 +128,10 @@ function SearchInfoCard({
               pathname: "/detail",
               query: {
                 id: id,
+                startDate: startDate,
+                endDate: endDate,
+                numberOfGuests: numberOfGuests,
+                daysOfStay: total,
               },
             })
           }
@@ -144,6 +154,10 @@ function SearchInfoCard({
                   pathname: "/detail",
                   query: {
                     id: id,
+                    startDate: startDate,
+                    endDate: endDate,
+                    numberOfGuests: numberOfGuests,
+                    daysOfStay: total,
                   },
                 })
               }
@@ -170,6 +184,10 @@ function SearchInfoCard({
                 pathname: "/detail",
                 query: {
                   id: id,
+                  startDate: startDate,
+                  endDate: endDate,
+                  numberOfGuests: numberOfGuests,
+                  daysOfStay: total,
                 },
               })
             }
