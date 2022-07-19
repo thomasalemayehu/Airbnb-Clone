@@ -34,14 +34,14 @@ function NavMenu() {
         )}
       </a>
 
-      <a
+      {/* <a
         className="menu-link"
         onClick={() => {
           router.push("/bookings");
         }}
       >
         Booking History
-      </a>
+      </a> */}
       <a
         className="menu-link flex items-center"
         onClick={() => {

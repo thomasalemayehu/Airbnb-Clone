@@ -4,18 +4,44 @@ import Header from "../components/Header";
 import { useSession } from "next-auth/react";
 import { useSelector } from "react-redux";
 import { selectItems, selectTotal } from "../slices/cartSlice";
-import { getProviders, signIn } from "next-auth/react";
 import SearchInfoCard from "../components/SearchInfoCard";
 import Image from "next/image";
 import Footer from "../components/Footer";
 import { useRouter } from "next/router";
+import { useState } from "react";
 import Currency from "react-currency-formatter";
+import { loadStripe } from "@stripe/stripe-js";
+import axios from "axios";
+import Spinner from "../components/Spinner";
+const stripePromise = loadStripe(process.env.stripe_public_key);
 function Cart() {
   const { data: session } = useSession();
+  const [isCheckoutLoading, setCheckoutLoading] = useState(false);
   const router = useRouter();
   const itemsInCart = useSelector(selectItems);
-
   const sumPrice = useSelector(selectTotal);
+
+  // Checkout function
+  const createCheckoutSession = async () => {
+    setCheckoutLoading(true);
+    const stripe = await stripePromise;
+
+    // create checkout session
+    const checkoutSession = await axios.post("/api/create-stripe-session", {
+      itemsInCart,
+      email: session.user?.email,
+    });
+
+    // redirect
+    const result = await stripe.redirectToCheckout({
+      sessionId: checkoutSession.data.id,
+    });
+
+    if (result.error) {
+      alert(result.error.message);
+    }
+    setCheckoutLoading(false);
+  };
 
   return (
     <>
@@ -132,7 +158,13 @@ function Cart() {
                 Grand Total:{" "}
                 <Currency currency="etb" quantity={sumPrice}></Currency>
               </div>
-              <button className="large-button py-2 mt-3">Checkout</button>
+              <button
+                className="large-button py-2 mt-3"
+                onClick={createCheckoutSession}
+                disabled={!session}
+              >
+                {isCheckoutLoading ? <Spinner></Spinner> : "Checkout"}
+              </button>
             </div>
           )}
         </div>

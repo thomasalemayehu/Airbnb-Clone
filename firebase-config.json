@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "airbnb-clone-c",
+  "private_key_id": "6fcb2614e490814a6834c9ff606612f389a43ca6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC9/SkBEmeFdayM\nCGpUBPczYUDRBrQhCqsO9bYwIqAKNQV9XtYKRZSF8UCAA1KTtt8SIn71hNtaEf6f\nMBDdCkXuHD7abca1u4bF3weP+QGCT+UjMXsw1DJWV+iNFv7Ip3LJX8uhNzFoKaab\nhIqT+vfIOWBjRVkiWP7DqUg06PfcTClDbRLXaEDqae7R/ZsO3jayhhka8xBWBsl7\nEZFajTt9Ybu6UYV8HeV4UI94vOOWnw4SFLrfrvbwj6z4e8uzMEJUFU2ccbEEndGO\nTkSaRoS/SrvwxAc2Aj2puziOJ/0jLAgen6Gq2CttSALQ7yhts9r3iJhyuoHeUOtD\nPwZ2uGmVAgMBAAECggEADPyhpr+bJkh5b3xhxvWB761YW2bMaFfM1/HG2Y/RsHDt\nu6NVw+T8C+iGWAR3dWkc4tCgghLqAERWSzZjaLX7kBUL3NgqgEtdy+fSIgQg7MdI\n//ixauXjvPrhsXH0H5jb+VTxhpx5uvI3P86LFHt6yuEqgWQA/Z6SEk402oe0QwbZ\nY/1Bx4zBSScU9ivEp1e7LxKYB93MzeNH7XLHrAsNOJHYgesFAuYsWnQi1b6aFALO\ncdQxvsoC3qyKomG4Z0PZD3XvFC/e1XJ7DrJCMRBMyfs7jj2yJsB0IkG4QBIGCjUe\nHZ+LhJhhBwEo+m7YY/iJgtoU6+R2Jqh8QJzgWY2yHwKBgQD3rEZyZ+IKnti4b+cz\nhbC1kGW//mWu9pSwLXiShKAFm7lVxuIFBh6IkiIm8WT68MWPD+tn/+gOtmn5MbUh\nK5JOeLOQoOcHr2sdOtqCUmd/aIYFpnsOcPO86c5rS1lFlpPaGHQYCubvEZoK8F/R\ndP0091UFmEXJaz14OrIcmnUT8wKBgQDEYGXGjYhuXBSGa1dl1/8taHcqGj9gklQU\nZ3QSqmD9e2Iug8XQVdB4dG9O+2/ht6NHELdG82kh9ijKHXHYwFj9EXhHlyGb1oSr\nSXZbGypMelcFKUnaqEc08cOIf7ypktVTU3WA8yRMHiSLi0WHLJ/R7r0FMUGe8k0u\nL+gNaJlWVwKBgQCbR96PIgR9hiP4VuiMy/gDjbnNivEzphOI9alPq2ksuvqTBfN1\nFOYV2BEje1tFXalvTZrZBH/4oXOFsh2O42OCYXirZ8YRcnDkzZ5r8MBFCEJmzn7+\nieC3A5vQd1hMIeEm7wfyfvtUziNXUmewyflquNsMe/DdHKhYdexvtINM8wKBgQC8\nfvdSZiqOHC7LdB+ZL4LOWFcB/93T2cGBMGh3PjoJNjThBzWKq8SGyuTJAIq9M+Mz\nZLU4Eo9YvQscLrVH5CHHEMzOkx/8kSYZsFM+Uk4AyPHcj2xHyX1IMcSJsmsqrjm8\nWQESPNEbi1dy5sVfYhMqlKm1YTlm05gH/I4WyM9e0wKBgBzQBd6JmDKpmesO2iRp\nOkRck16/N/ALHNJ99Eqjq/2VbSPNAC+dmhtxepQ4xhF1GTFkH7uU1ayr6t5djQEP\n9IabUZY+6eh7XZ7Pl8jsWDNZSisOqLHpRE/CUilidQXNVz+wUykNFwj9e1MwHvJA\nNOpspDrPWVaJrfsJegbj5Ier\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-slyn3@airbnb-clone-c.iam.gserviceaccount.com",
+  "client_id": "105181984582191652887",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-slyn3%40airbnb-clone-c.iam.gserviceaccount.com"
+}
