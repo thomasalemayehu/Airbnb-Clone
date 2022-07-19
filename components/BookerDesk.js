@@ -1,10 +1,13 @@
 import React from "react";
+import Currency from "react-currency-formatter";
 
-function BookerDesk() {
+function BookerDesk({ price }) {
   return (
     <div className="hidden lg:inline-block w-[360px] my-auto shadow-md rounded-2xl px-12 py-4 text-sm mt-3 hover:bg-gray-100 transition duration-200 ease-out">
       {/* rate */}
-      <div className="text-xl font-bold">$1091/night</div>
+      <div className="text-xl font-bold">
+        <Currency quantity={price * 53.33} currency="etb" /> / Night
+      </div>
 
       {/* dates */}
       <div className="flex mt-4">
@@ -27,7 +30,7 @@ function BookerDesk() {
       </div>
 
       {/* Button */}
-      <button className="large-button mt-6">Book Now</button>
+      <button className="large-button mt-6">Checkout Now</button>
 
       {/* desc */}
       <div className="mt-2  text-sm text-center text-gray-500">
@@ -38,32 +41,50 @@ function BookerDesk() {
       <div className="mt-4 text-base">
         {/* main */}
         <div className="flex">
-          <span className="flex-grow">$1091 x 7 nights</span>
-          <span>$7637</span>
+          <span className="flex-grow">
+            <Currency quantity={price * 53.33} currency="etb" /> x 7 nights
+          </span>
+          <span>
+            <Currency quantity={price * 53.33 * 7} currency="etb" />
+          </span>
         </div>
 
         {/* cleaning */}
         <div className="mt-2 flex">
           <span className="flex-grow">Cleaning Fee</span>
-          <span>$172</span>
+          <span>
+            <Currency quantity={1720} currency="etb" />
+          </span>
         </div>
 
         {/* Service */}
         <div className="mt-2 flex">
           <span className="flex-grow">Service Fee</span>
-          <span>$72</span>
+          <span>
+            <Currency quantity={720} currency="etb" />
+          </span>
         </div>
 
         {/* Tax */}
         <div className="mt-2 pb-4 border-b flex">
           <span className="flex-grow">Tax Fee</span>
-          <span>$231</span>
+          <span>
+            <Currency
+              quantity={(price * 53.33 * 7 + 1720 + 720) * 0.35}
+              currency="etb"
+            />
+          </span>
         </div>
 
         {/* Total */}
         <div className="mt-2 text-xl font-semibold flex">
           <span className="flex-grow">Total Fee</span>
-          <span>$8769</span>
+          <span>
+            <Currency
+              quantity={(price * 53.33 * 7 + 1720 + 720) * 1.35}
+              currency="etb"
+            />
+          </span>
         </div>
       </div>
     </div>

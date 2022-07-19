@@ -108,7 +108,6 @@ function Header({ placeHolder = "Start your search" }) {
                 loading="lazy"
                 src={session.user?.image}
                 alt={session.user?.name}
-                onError="this.src = '/images/Profile.png'"
                 className="h-8 object-cover rounded-full overflow-x-hidden overflow-y-hidden"
               />
               {itemsInCart.length > 0 && (

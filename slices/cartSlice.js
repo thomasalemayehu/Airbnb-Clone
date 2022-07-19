@@ -37,7 +37,10 @@ export const { addToCart, removeFromCart } = cartSlice.actions;
 export const selectItems = (state) => state.cart.items;
 export const selectCountItems = (state) => state.basket.countedItems;
 export const selectTotal = (state) =>
-  state.basket.items.reduce((total, item) => total + item.price * 55, 0);
+  state.cart.items.reduce(
+    (totalPrice, item) => totalPrice + item.price * 53.33 * item.total,
+    0
+  );
 
 export const countedItems = (state) => state.basket.items.reduce(item);
 

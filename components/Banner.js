@@ -15,17 +15,17 @@ function Banner() {
 
       <div className="absolute top-1/2 w-full text-center">
         <p className="text-xl sm:text-2xl text-white font-semibold mb-2">
-          {/* <Typewriter
+          <Typewriter
             options={{
               strings: ["Not sure where to go?"],
               autoStart: true,
               loop: false,
             }}
-          /> */}
-          Not sure where to go?
+          />
+          {/* Not sure where to go? */}
         </p>
 
-        <button className="text-primary bg-white px-12 py-4 shadow-md rounded-full font-bold my-3 hover:shadow-xl active:scale-90 transition duration-150 active:bg-primary active:text-white">{`I'm flexible`}</button>
+        <button className="normal-button bg-white active:text-primaryDark">{`I'm flexible`}</button>
       </div>
     </div>
   );

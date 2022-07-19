@@ -62,61 +62,100 @@ export default function Home({ exploreData, liveData }) {
 
 export async function getStaticProps() {
   const exploreData = [
+    // Dynamic Images
     {
       id: "1",
-      img: "https://links.papareact.com/5j2",
-      location: "London",
-      distance: "45-minute drive",
+      img: "/images/Cities/Addis Ababa.gif",
+      location: "Addis Ababa",
+      distance: "Capital of Ethiopia",
     },
     {
       id: "2",
-      img: "https://links.papareact.com/1to",
-      location: "Manchester",
-      distance: "4.5-hour drive",
+      img: "/images/Cities/New York.gif",
+      location: "New York",
+      distance: "4.5-hour drive from D.C",
     },
     {
       id: "3",
-      img: "https://links.papareact.com/40m",
-      location: "Liverpool",
-      distance: "4.5-hour drive",
+      img: "/images/Cities/Tokyo.gif",
+      location: "Tokyo",
+      distance: "Capital of Japan",
     },
     {
       id: "4",
-      img: "https://links.papareact.com/msp",
-      location: "York",
-      distance: "4-hour drive",
+      img: "/images/Cities/Madrid.gif",
+      location: "Madrid",
+      distance: "Capital of Spain",
     },
+
+    // Static Images
     {
       id: "5",
-      img: "https://links.papareact.com/2k3",
-      location: "Cardiff",
-      distance: "45-minute drive",
+      img: "/images/Cities/Amsterdam.webp",
+      location: "Amsterdam",
+      distance: "Capital of Netherlands",
     },
     {
       id: "6",
-      img: "https://links.papareact.com/ynx",
-      location: "Birkenhead",
-      distance: "4.5-hour drive",
+      img: "/images/Cities/Barcelona.webp",
+      location: "Barcelona",
+      distance: "4.5-hour drive from Madrid",
     },
     {
       id: "7",
-      img: "https://links.papareact.com/kji",
-      location: "Newquay",
-      distance: "6-hour drive",
+      img: "/images/Cities/Dubai.webp",
+      location: "Dubai",
+      distance: "Capital of UAE",
     },
     {
       id: "8",
-      img: "https://links.papareact.com/41m",
-      location: "Hove",
-      distance: "2-hour drive",
+      img: "/images/Cities/Florence.webp",
+      location: "Florence",
+      distance: "2-hour drive from Rome",
+    },
+    {
+      id: "9",
+      img: "/images/Cities/London.webp",
+      location: "London",
+      distance: "Capital of UK",
+    },
+    {
+      id: "10",
+      img: "/images/Cities/New Orleans.webp",
+      location: "New Orleans",
+      distance: "6 hours from D.C",
+    },
+    {
+      id: "11",
+      img: "/images/Cities/Paris.webp",
+      location: "Paris",
+      distance: "Capital of France",
+    },
+    {
+      id: "12",
+      img: "/images/Cities/Stockholm.webp",
+      location: "Stockholm",
+      distance: "Capital of Sweden",
     },
   ];
 
   const liveData = [
-    { img: "https://links.papareact.com/2io", title: "Outdoor getaways" },
-    { img: "https://links.papareact.com/q7j", title: "Unique stays" },
-    { img: "https://links.papareact.com/s03", title: "Entire homes" },
-    { img: "https://links.papareact.com/8ix", title: "Pet allowed" },
+    { img: "/images/Discover/Arctic.webp", title: "Arctic Stays" },
+    {
+      img: "/images/Discover/Bed & Breakfast.webp",
+      title: "Bed and Breakfast",
+    },
+    { img: "/images/Discover/Caves.webp", title: "Cave Stays" },
+    { img: "/images/Discover/Design.webp", title: "Great Design Stays" },
+    { img: "/images/Discover/Entire.webp", title: "Entire Home Stays" },
+    {
+      img: "/images/Discover/Island.webp",
+      title: "Island Stays",
+    },
+    { img: "/images/Discover/Outdoor.webp", title: "Outdoor Stays" },
+    { img: "/images/Discover/Parks.webp", title: "Park Stays" },
+    { img: "/images/Discover/Pets.webp", title: "Pets Allowed" },
+    { img: "/images/Discover/Unique.webp", title: "Unique Stays" },
   ];
 
   return {

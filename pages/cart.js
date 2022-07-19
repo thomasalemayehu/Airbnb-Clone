@@ -3,16 +3,19 @@ import CustomHead from "../components/CustomHead";
 import Header from "../components/Header";
 import { useSession } from "next-auth/react";
 import { useSelector } from "react-redux";
-import { selectItems } from "../slices/cartSlice";
+import { selectItems, selectTotal } from "../slices/cartSlice";
 import { getProviders, signIn } from "next-auth/react";
 import SearchInfoCard from "../components/SearchInfoCard";
 import Image from "next/image";
 import Footer from "../components/Footer";
 import { useRouter } from "next/router";
+import Currency from "react-currency-formatter";
 function Cart() {
   const { data: session } = useSession();
   const router = useRouter();
   const itemsInCart = useSelector(selectItems);
+  const sumPrice = useSelector(selectTotal);
+
   return (
     <>
       <CustomHead pageTitle={"Airbnb - Cart"} />
@@ -114,10 +117,15 @@ function Cart() {
             )}
 
           {/* Checkout button */}
-          <div className="flex flex-col mx-auto  w-2/5  mt-16">
-            <div className="font-bold text-lg">Grand Total: 1200$</div>
-            <button className="large-button py-2 mt-3">Checkout</button>
-          </div>
+          {itemsInCart.length >= 1 && (
+            <div className="flex flex-col mx-auto  w-2/5  mt-16">
+              <div className="font-bold text-lg">
+                Grand Total:{" "}
+                <Currency currency="etb" quantity={sumPrice}></Currency>
+              </div>
+              <button className="large-button py-2 mt-3">Checkout</button>
+            </div>
+          )}
         </div>
 
         <Footer />

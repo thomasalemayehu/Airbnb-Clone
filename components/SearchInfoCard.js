@@ -15,6 +15,7 @@ import {
   removeFromBookmark,
 } from "../slices/bookmarkSlice";
 import { useSelector } from "react-redux";
+import Currency from "react-currency-formatter";
 
 function SearchInfoCard({
   id,
@@ -40,25 +41,25 @@ function SearchInfoCard({
     if (session && session.user) {
       const doesExist = itemsInCart.filter((item) => item.id == id);
 
-      if (doesExist < 1) {
-        dispatch(
-          addToCart({
-            id,
-            image,
-            location,
-            title,
-            description,
-            star,
-            price,
-            total,
-            longitude,
-            latitude,
-          })
-        );
-        toast.success(`${title} added to cart!`);
-      } else {
-        toast.warning(`${title} already in  cart!`);
+      if (doesExist > 0) {
+        dispatch(removeFromCart(id));
       }
+
+      dispatch(
+        addToCart({
+          id,
+          image,
+          location,
+          title,
+          description,
+          star,
+          price,
+          total,
+          longitude,
+          latitude,
+        })
+      );
+      toast.success(`${title} added to cart!`);
     } else {
       toast.error("Login to Add to Cart");
     }
@@ -105,6 +106,11 @@ function SearchInfoCard({
       toast.error("Please Login");
     }
   };
+
+  const USD_TO_ETB = 53.33;
+
+  // const totalStayCost = int.parse(prices) * int.parse(total);
+
   return (
     <main className="py-2 pb-4 r  hover:opacity-90 hover:shadow-lg transition duration-200 ease-out">
       {/* Card */}
@@ -182,8 +188,19 @@ function SearchInfoCard({
               <span>{star}</span>
             </p>
             <div>
-              <p className="text-l lg:text-2xl font-semibold pb-2">{price}</p>
-              <p className="text-right font-extralight">{total}</p>
+              <p className="text-l lg:text-2xl font-semibold pb-2">
+                <Currency
+                  currency="etb"
+                  quantity={price * USD_TO_ETB}
+                ></Currency>{" "}
+                / Night
+              </p>
+              <p className="text-right font-light">
+                <Currency
+                  currency="etb"
+                  quantity={price * total * USD_TO_ETB}
+                ></Currency>
+              </p>
             </div>
           </div>
         </div>
