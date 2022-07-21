@@ -39,7 +39,7 @@
    ![Search Result, Airbnb Clone](https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/SearchResult.png)
 
 4. WishList
-   ![WishList, Airbnb Clone](https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/WishList.png)
+   ![WishList, Airbnb Clone](https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/Wishlist.png)
 
 5. Stripe Checkout
    ![Checkout, Airbnb Clone](https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/Checkout.png)

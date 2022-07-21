@@ -12,7 +12,7 @@ function Bookings({ bookings }) {
       <CustomHead pageTitle={"Airbnb - Bookings"}></CustomHead>
       <Header />
 
-      <main className="max-w-3xl mx-auto mt-12 ">
+      <main className="max-w-3xl mx-auto mt-12 pb-16">
         {bookings.length > 0 &&
           bookings?.map(
             (
