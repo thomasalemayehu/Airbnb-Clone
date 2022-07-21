@@ -12,9 +12,9 @@
 <img src="https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/NextJs.svg" height=30>
 <img src="https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/Tailwind.svg" height=30>
 <img src="https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/Redux.svg" height=30>
-<img src="https://raw.githubusercontent.com/thomasalemayehu/Dice-Game/main/public/readmefiles/Firebase.svg" height=30>
+<img src="https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/Firebase.svg" height=30>
 <img src="https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/Stripe.svg" height=30>
-<img src="https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/NextAuth.png" height=30>
+<img src="https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/NexuAuth.png" height=30>
 <img src="https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/MapBox.png" height=30>
 </span>
 
