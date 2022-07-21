@@ -2,11 +2,13 @@ import React from "react";
 import Header from "../components/Header";
 import { CheckCircleIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
+import CustomHead from "../components/CustomHead";
 
 function Success() {
   const router = useRouter();
   return (
     <>
+      <CustomHead pageTitle={"Airbnb - Success"}></CustomHead>
       <Header />
 
       {/* Message */}

@@ -9,7 +9,7 @@ import moment from "moment";
 function Bookings({ bookings }) {
   return (
     <>
-      <CustomHead pageTitle={"Booking"} />
+      <CustomHead pageTitle={"Airbnb - Bookings"}></CustomHead>
       <Header />
 
       <main className="max-w-3xl mx-auto mt-12 ">

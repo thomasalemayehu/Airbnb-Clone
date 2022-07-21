@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Header from "../components/Header";
+import CustomHead from "../components/CustomHead";
 import { useRouter } from "next/router";
 
 export default function Custom404() {
   const router = useRouter();
   return (
     <div className="h-screen w-screen">
+      <CustomHead pageTitle={"Airbnb - Page Not Found"}></CustomHead>
       <Header />
       <section className="flex h-5/6 w-full">
         {/* Image */}
