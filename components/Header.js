@@ -89,6 +89,11 @@ function Header({ placeHolder = "Start your search" }) {
           placeholder={placeHolder}
           value={searchInputValue}
           onChange={(e) => setSearchInputValue(e.target.value)}
+          onKeyUp={(e) => {
+            if (e.key == "Enter") {
+              search();
+            }
+          }}
         />
         <SearchIcon className="hidden md:inline-flex h-8 bg-primary text-white rounded-full p-2 cursor-pointer md:mx-2" />
       </div>
