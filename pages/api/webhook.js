@@ -23,7 +23,6 @@ const completeOrder = (session) => {
       startDate: session.metadata.startDate,
       endDate: session.metadata.endDate,
       numberOfGuests: session.metadata.numberOfGuests,
-      daysOfStay: session.metadata.daysOfStay,
       title: session.metadata.title,
       description: session.metadata.description,
       price: session.metadata.price,
@@ -60,6 +59,23 @@ export default async function (req, res) {
     if (event.type === "checkout.session.completed") {
       const session = event.data.object;
 
+      console.log("======================================");
+      console.log("Invoked");
+      // const values = {
+      //   amount: session.amount_total / 100,
+      //   images: JSON.parse(session.metadata.images),
+      //   startDate: session.metadata.startDate,
+      //   endDate: session.metadata.endDate,
+      //   numberOfGuests: session.metadata.numberOfGuests,
+      //   daysOfStay: session.metadata.daysOfStay,
+      //   title: session.metadata.title,
+      //   description: session.metadata.description,
+      //   price: session.metadata.price,
+      //   timestamp: admin.firestore.FieldValue.serverTimestamp(),
+      // };
+      // console.log(session);
+      console.log("======================================");
+
       return completeOrder(session)
         .then(() => {
           res.status(200);
@@ -68,6 +84,7 @@ export default async function (req, res) {
           console.log(err);
           res.status(400).send("Err" + err);
         });
+      // return res.status(200);
     }
   }
 }

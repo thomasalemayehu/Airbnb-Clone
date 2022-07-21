@@ -4,3 +4,5 @@
 5. Keyboard search submission
 6. Custom Data
 7. Map Responsive
+
+.\stripe.exe listen --forward-to localhost:3000/api/webhook

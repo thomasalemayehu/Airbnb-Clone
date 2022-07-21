@@ -36,9 +36,6 @@ async function CreateStripeSession(req, res) {
         numberOfGuests: JSON.stringify(
           itemsInCart.map((item) => item.numberOfGuests)[0]
         ),
-        daysOfStay: JSON.stringify(
-          itemsInCart.map((item) => item.daysOfStay)[0]
-        ),
         title: JSON.stringify(itemsInCart.map((item) => item.title)[0]),
         description: JSON.stringify(
           itemsInCart.map((item) => item.description)[0]
