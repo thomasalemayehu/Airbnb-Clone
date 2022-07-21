@@ -1,34 +1,87 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Project Title:
 
-## Getting Started
+    Airbnb Clone
 
-First, run the development server:
+## Project Description:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+     A clone Airbnb website that can be used to view and book rooms/stays in different locations
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack Used:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<span> 
+<img src="https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/NextJs.svg" height=30>
+<img src="https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/Tailwind.svg" height=30>
+<img src="https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/Redux.svg" height=30>
+<img src="https://raw.githubusercontent.com/thomasalemayehu/Dice-Game/main/public/readmefiles/Firebase.svg" height=30>
+<img src="https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/Stripe.svg" height=30>
+<img src="https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/NextAuth.png" height=30>
+<img src="https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/MapBox.png" height=30>
+</span>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Tools Used:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<span> 
+<img src="https://raw.githubusercontent.com/thomasalemayehu/Dice-Game/main/assets/readmefiles/visual-studio.svg" height=30>
+<img src="https://raw.githubusercontent.com/thomasalemayehu/Dice-Game/main/assets/readmefiles/git-icon.svg" height=30>
+<img src="https://raw.githubusercontent.com/thomasalemayehu/Dice-Game/main/assets/readmefiles/github-icon.svg" height=30>
+<img src="https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/Vercel.svg" height=30>
+</span>
 
-## Learn More
+## Project Preview
 
-To learn more about Next.js, take a look at the following resources:
+1. Home Page
+   ![Home, Airbnb Clone](https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/Home.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Search
+   ![Search, Airbnb Clone](https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/SearchBar.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. Result
+   ![Search Result, Airbnb Clone](https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/SearchResult.png)
 
-## Deploy on Vercel
+4. WishList
+   ![WishList, Airbnb Clone](https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/WishList.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. Stripe Checkout
+   ![Checkout, Airbnb Clone](https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/Checkout.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+6. Booking History
+   ![Booking History, Airbnb Clone](https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/History.png)
+
+## How to run
+
+1.  Install All Dependencies
+
+    # yarn install
+
+2.  Create .env file in root directory
+3.  Add environment variables to .env file
+
+    # For NextAuth
+
+        GOOGLE_ID
+
+        GOOGLE_SECRET
+
+        GITHUB_ID
+
+        GITHUB_SECRET
+
+        FACEBOOK_CLIENT_ID
+
+        FACEBOOK_CLIENT_SECRET
+
+        INSTAGRAM_CLIENT_ID
+
+        INSTAGRAM_CLIENT_SECRET
+
+    # For Stripe Checkout
+
+        STRIPE_PUBLIC_KEY
+
+        STRIPE_SECRET_KEY
+
+        STRIPE_SIGNING_SECRET
+
+4.  Run Project
+
+    # yarn run dev
