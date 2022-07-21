@@ -149,8 +149,8 @@ export async function getServerSideProps(context) {
       star: 5.0,
       reviewCount: "7",
       price: "50",
-      long: 8.954128877720558,
-      lat: 38.74880513746566,
+      lat: 8.954128877720558,
+      long: 38.74880513746566,
     },
     {
       id: "2",
@@ -165,8 +165,8 @@ export async function getServerSideProps(context) {
       reviewCount: "1",
       discountRate: "0",
       price: "62",
-      long: 8.96626841022152,
-      lat: 38.77240947897332,
+      lat: 8.96626841022152,
+      long: 38.77240947897332,
     },
     {
       id: "3",
@@ -181,8 +181,8 @@ export async function getServerSideProps(context) {
       reviewCount: "1",
       discountRate: "0",
       price: "80",
-      long: 8.96626841022152,
-      lat: 38.77240947897332,
+      lat: 8.96626841022152,
+      long: 38.77240947897332,
     },
     {
       id: "4",
@@ -196,8 +196,8 @@ export async function getServerSideProps(context) {
       reviewCount: "1",
       discountRate: "10",
       price: "80",
-      long: 9.001933731557346,
-      lat: 38.77209549707948,
+      lat: 9.001933731557346,
+      long: 38.77209549707948,
     },
     {
       id: "5",
@@ -212,8 +212,8 @@ export async function getServerSideProps(context) {
       reviewCount: "1",
       discountRate: "10",
       price: "57",
-      long: 9.001933731557346,
-      lat: 38.77209549707948,
+      lat: 9.001933731557346,
+      long: 38.77209549707948,
     },
     // New York
     {
@@ -229,8 +229,8 @@ export async function getServerSideProps(context) {
       reviewCount: "181",
       discountRate: "7",
       price: "86",
-      long: 40.69884436720829,
-      lat: -73.92132208123624,
+      lat: 40.69884436720829,
+      long: -73.92132208123624,
     },
     {
       id: "7",
@@ -245,8 +245,8 @@ export async function getServerSideProps(context) {
       reviewCount: "1",
       discountRate: "12",
       price: "178",
-      long: 40.691261285557076,
-      lat: -73.93320606121398,
+      lat: 40.691261285557076,
+      long: -73.93320606121398,
     },
     {
       id: "8",
@@ -261,8 +261,8 @@ export async function getServerSideProps(context) {
       reviewCount: "1",
       discountRate: "0",
       price: "157",
-      long: 40.686995371965324,
-      lat: -73.95208910229036,
+      lat: 40.686995371965324,
+      long: -73.95208910229036,
     },
     // Tokyo
     {
@@ -278,8 +278,8 @@ export async function getServerSideProps(context) {
       reviewCount: "20",
       discountRate: "6",
       price: "84",
-      long: 36.861583353553804,
-      lat: 40.54223033179386,
+      lat: 36.861583353553804,
+      long: 40.54223033179386,
     },
     {
       id: "10",
@@ -294,8 +294,8 @@ export async function getServerSideProps(context) {
       reviewCount: "130",
       discountRate: "2",
       price: "31",
-      long: 35.621907824877276,
-      lat: 40.34750520839253,
+      lat: 35.621907824877276,
+      long: 40.34750520839253,
     },
 
     {
@@ -310,8 +310,8 @@ export async function getServerSideProps(context) {
       reviewCount: "69",
       discountRate: "0",
       price: "60",
-      long: -0.0022275,
-      lat: 51.5421655,
+      lat: -0.0022275,
+      long: 51.5421655,
     },
     {
       id: "12",
@@ -325,8 +325,8 @@ export async function getServerSideProps(context) {
       reviewCount: "55",
       price: "40",
       discountRate: "0",
-      long: -0.095091,
-      lat: 51.48695,
+      lat: -0.095091,
+      long: 51.48695,
     },
     {
       id: "13",
@@ -339,8 +339,8 @@ export async function getServerSideProps(context) {
       star: 3.8,
       reviewCount: "77",
       price: "35",
-      long: -0.135638,
-      lat: 51.521916,
+      lat: -0.135638,
+      long: 51.521916,
     },
 
     // Madrid

@@ -59,8 +59,8 @@ export async function getServerSideProps() {
       discountRate: 12,
       price: "£30 / night",
       total: "£117 total",
-      long: -0.0022275,
-      lat: 51.5421655,
+      lat: -0.0022275,
+      long: 51.5421655,
     },
 
     {
@@ -74,8 +74,8 @@ export async function getServerSideProps() {
       price: "£35 / night",
       total: "£207 total",
       discountRate: 7,
-      long: -0.135638,
-      lat: 51.521916,
+      lat: -0.135638,
+      long: 51.521916,
     },
     {
       id: "7",
@@ -87,8 +87,8 @@ export async function getServerSideProps() {
       star: 3.85,
       price: "£90 / night",
       total: "£650 total",
-      long: -0.109889,
-      lat: 51.521245,
+      lat: -0.109889,
+      long: 51.521245,
       discountRate: 22,
     },
   ];
