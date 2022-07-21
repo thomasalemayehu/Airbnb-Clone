@@ -9,13 +9,13 @@
 ## Tech Stack Used:
 
 <span> 
-<img src="https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/NextJs.svg" height=30>
-<img src="https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/Tailwind.svg" height=30>
-<img src="https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/Redux.svg" height=30>
+<img src="https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/NextJs.svg" height=30>
+<img src="https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/Tailwind.svg" height=30>
+<img src="https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/Redux.svg" height=30>
 <img src="https://raw.githubusercontent.com/thomasalemayehu/Dice-Game/main/public/readmefiles/Firebase.svg" height=30>
-<img src="https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/Stripe.svg" height=30>
-<img src="https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/NextAuth.png" height=30>
-<img src="https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/MapBox.png" height=30>
+<img src="https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/Stripe.svg" height=30>
+<img src="https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/NextAuth.png" height=30>
+<img src="https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/MapBox.png" height=30>
 </span>
 
 ## Tools Used:
@@ -24,28 +24,28 @@
 <img src="https://raw.githubusercontent.com/thomasalemayehu/Dice-Game/main/assets/readmefiles/visual-studio.svg" height=30>
 <img src="https://raw.githubusercontent.com/thomasalemayehu/Dice-Game/main/assets/readmefiles/git-icon.svg" height=30>
 <img src="https://raw.githubusercontent.com/thomasalemayehu/Dice-Game/main/assets/readmefiles/github-icon.svg" height=30>
-<img src="https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/Vercel.svg" height=30>
+<img src="https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/Vercel.svg" height=30>
 </span>
 
 ## Project Preview
 
 1. Home Page
-   ![Home, Airbnb Clone](https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/Home.png)
+   ![Home, Airbnb Clone](https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/Home.png)
 
 2. Search
-   ![Search, Airbnb Clone](https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/SearchBar.png)
+   ![Search, Airbnb Clone](https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/SearchBar.png)
 
 3. Result
-   ![Search Result, Airbnb Clone](https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/SearchResult.png)
+   ![Search Result, Airbnb Clone](https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/SearchResult.png)
 
 4. WishList
-   ![WishList, Airbnb Clone](https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/WishList.png)
+   ![WishList, Airbnb Clone](https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/WishList.png)
 
 5. Stripe Checkout
-   ![Checkout, Airbnb Clone](https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/Checkout.png)
+   ![Checkout, Airbnb Clone](https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/Checkout.png)
 
 6. Booking History
-   ![Booking History, Airbnb Clone](https://raw.githubusercontent.com/thomasalemayehu/air-bnb/main/public/readmefiles/History.png)
+   ![Booking History, Airbnb Clone](https://raw.githubusercontent.com/thomasalemayehu/Airbnb-Clone/main/public/readmefiles/History.png)
 
 ## How to run
 
@@ -85,3 +85,5 @@
 4.  Run Project
 
     # yarn run dev
+
+# Vercel Hosted Test Version Link : https://airbnb-clone-kappa-wine.vercel.app/
