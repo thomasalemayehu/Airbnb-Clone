@@ -1,5 +1,4 @@
 import React from "react";
-import Currency from "react-currency-formatter";
 const USD_TO_ETB = 53.3;
 
 function BookerDesk({ price, startDate, endDate, numberOfGuests, daysOfStay }) {
@@ -7,7 +6,7 @@ function BookerDesk({ price, startDate, endDate, numberOfGuests, daysOfStay }) {
     <div className="hidden lg:inline-block w-[360px] my-auto shadow-md rounded-2xl px-12 py-4 text-sm mt-3 hover:bg-gray-100 transition duration-200 ease-out">
       {/* rate */}
       <div className="text-xl font-bold">
-        <Currency quantity={price * USD_TO_ETB} currency="etb" /> / Night
+        <div>{price * USD_TO_ETB} ETB / Night</div>
       </div>
 
       {/* dates */}
@@ -45,59 +44,34 @@ function BookerDesk({ price, startDate, endDate, numberOfGuests, daysOfStay }) {
         {/* main */}
         <div className="flex">
           <span className="flex-grow">
-            <Currency quantity={price * USD_TO_ETB} currency="etb" /> x{" "}
+            {price * USD_TO_ETB}
             {daysOfStay} nights
           </span>
-          <span>
-            <Currency
-              quantity={price * USD_TO_ETB * daysOfStay}
-              currency="etb"
-            />
-          </span>
+          <span>{price * USD_TO_ETB * daysOfStay}</span>
         </div>
 
         {/* cleaning  - 0.4% */}
         <div className="mt-2 flex">
           <span className="flex-grow">Cleaning Fee</span>
-          <span>
-            <Currency
-              quantity={price * USD_TO_ETB * daysOfStay * 0.04}
-              currency="etb"
-            />
-          </span>
+          <span>{price * USD_TO_ETB * daysOfStay * 0.04}</span>
         </div>
 
         {/* Service 0.25 % */}
         <div className="mt-2 flex">
           <span className="flex-grow">Service Fee</span>
-          <span>
-            <Currency
-              quantity={price * USD_TO_ETB * daysOfStay * 0.025}
-              currency="etb"
-            />
-          </span>
+          <span>{price * USD_TO_ETB * daysOfStay * 0.025}</span>
         </div>
 
         {/* Tax */}
         <div className="mt-2 pb-4 border-b flex">
           <span className="flex-grow">Tax Fee</span>
-          <span>
-            <Currency
-              quantity={price * USD_TO_ETB * daysOfStay * 1.065 * 0.35}
-              currency="etb"
-            />
-          </span>
+          <span>{price * USD_TO_ETB * daysOfStay * 1.065 * 0.35}</span>
         </div>
 
         {/* Total */}
         <div className="mt-2 text-xl font-semibold flex">
           <span className="flex-grow">Total Fee</span>
-          <span>
-            <Currency
-              quantity={price * USD_TO_ETB * daysOfStay * 1.415}
-              currency="etb"
-            />
-          </span>
+          <span>{price * USD_TO_ETB * daysOfStay * 1.415} ETB</span>
         </div>
       </div>
     </div>

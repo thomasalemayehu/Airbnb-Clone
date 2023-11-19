@@ -9,7 +9,7 @@ import Image from "next/image";
 import Footer from "../components/Footer";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import Currency from "react-currency-formatter";
+
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 import Spinner from "../components/Spinner";
@@ -155,8 +155,7 @@ function Cart() {
           {itemsInCart.length >= 1 && (
             <div className="flex flex-col mx-auto  w-2/5  mt-16">
               <div className="font-bold text-lg">
-                Grand Total:{" "}
-                <Currency currency="etb" quantity={sumPrice}></Currency>
+                Grand Total: <div>{sumPrice} ETB</div>
               </div>
               <button
                 className="large-button py-2 mt-3"

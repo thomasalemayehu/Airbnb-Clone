@@ -2965,7 +2965,7 @@ murmurhash-js@^1.0.0:
   resolved "https://registry.npmjs.org/murmurhash-js/-/murmurhash-js-1.0.0.tgz"
   integrity sha512-TvmkNhkv8yct0SVBSy+o8wYzXjE4Zz3PCesbfs8HiCXXdcTuocApFv11UWlNFWKYsP2okqrhb7JNlSm9InBhIw==
 
-nanoid@^3.3.4, nanoid@^3.3.6:
+nanoid@^3.3.6:
   version "3.3.7"
   resolved "https://registry.npmjs.org/nanoid/-/nanoid-3.3.7.tgz"
   integrity sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==
@@ -3279,16 +3279,7 @@ postcss-value-parser@^4.0.0, postcss-value-parser@^4.2.0:
   resolved "https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz"
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
 
-postcss@^8.0.0, postcss@^8.1.0, postcss@^8.2.14, postcss@^8.3.3, postcss@^8.4.18, postcss@>=8.0.9, postcss@8.4.19:
-  version "8.4.19"
-  resolved "https://registry.npmjs.org/postcss/-/postcss-8.4.19.tgz"
-  integrity sha512-h+pbPsyhlYj6N2ozBmHhHrs9DzGmbaarbLvWipMRO7RLS+v4onj26MPFXA5OBYFxyqYhUJK456SwDcY9H2/zsA==
-  dependencies:
-    nanoid "^3.3.4"
-    picocolors "^1.0.0"
-    source-map-js "^1.0.2"
-
-postcss@8.4.31:
+postcss@^8.0.0, postcss@^8.1.0, postcss@^8.2.14, postcss@^8.3.3, postcss@^8.4.18, postcss@>=8.0.9, postcss@8.4.31:
   version "8.4.31"
   resolved "https://registry.npmjs.org/postcss/-/postcss-8.4.31.tgz"
   integrity sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==
@@ -3334,7 +3325,7 @@ process-nextick-args@~2.0.0:
   resolved "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz"
   integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
 
-prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1, prop-types@15:
+prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1, prop-types@15:
   version "15.8.1"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -3498,13 +3489,6 @@ raw-body@2.4.1:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-currency-formatter@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/react-currency-formatter/-/react-currency-formatter-1.1.0.tgz"
-  integrity sha512-5AIHYk8WKKKfXfxQW7i7V3DTQkDNqRcqAWyTy3KTs89qooOTj1o5VWkPOLjIxKOSGir6nUt8Aw8WXxAGn5nY6w==
-  dependencies:
-    prop-types "^15.6.0"
-
 react-date-range@1.4.0:
   version "1.4.0"
   resolved "https://registry.npmjs.org/react-date-range/-/react-date-range-1.4.0.tgz"
@@ -3571,7 +3555,7 @@ react-toastify@9.1.1:
   dependencies:
     clsx "^1.1.1"
 
-"react@^0.14 || ^15.0.0-rc || >=15.0", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18", "react@^17.0.2 || ^18", "react@^17.x || ^18.x", react@^18.2.0, "react@>= 16", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@>=16, react@>=16.3.0, "react@0.14 || 15 - 18", react@16.x, react@18.2.0:
+"react@^0.14 || ^15.0.0-rc || >=15.0", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18", "react@^17.0.2 || ^18", "react@^17.x || ^18.x", react@^18.2.0, "react@>= 16", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@>=16, react@>=16.3.0, "react@0.14 || 15 - 18", react@18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==

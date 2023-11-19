@@ -1,6 +1,5 @@
 import React from "react";
 import moment from "moment";
-import Currency from "react-currency-formatter";
 
 function BookingsCard({
   id,
@@ -26,7 +25,7 @@ function BookingsCard({
         <div>
           <p className="text-xs font-bold">TOTAL</p>
           <p>
-            <Currency quantity={amount * USD_TO_ETB} currency="etb"></Currency>
+            <div>{amount * USD_TO_ETB} ETB</div>
           </p>
         </div>
 

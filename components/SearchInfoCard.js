@@ -15,7 +15,7 @@ import {
   removeFromBookmark,
 } from "../slices/bookmarkSlice";
 import { useSelector } from "react-redux";
-import Currency from "react-currency-formatter";
+
 
 function SearchInfoCard({
   id,
@@ -207,17 +207,10 @@ function SearchInfoCard({
             </p>
             <div>
               <p className="text-l lg:text-2xl font-semibold pb-2">
-                <Currency
-                  currency="etb"
-                  quantity={price * USD_TO_ETB}
-                ></Currency>{" "}
-                / Night
+                {price * USD_TO_ETB}/ Night
               </p>
               <p className="text-right font-light">
-                <Currency
-                  currency="etb"
-                  quantity={price * total * USD_TO_ETB * 1.415}
-                ></Currency>
+                {price * total * USD_TO_ETB * 1.415}
               </p>
             </div>
           </div>
