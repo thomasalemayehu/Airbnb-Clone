@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Header from "../components/Header";
 import CustomHead from "../components/CustomHead";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { CheckCircleIcon, StarIcon } from "@heroicons/react/solid";
 import LiveMap from "../components/LiveMap";
 import BookerDesk from "../components/BookerDesk";

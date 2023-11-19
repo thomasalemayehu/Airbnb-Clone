@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { selectItems } from "../slices/cartSlice";
 import { selectBookmarkItems } from "../slices/bookmarkSlice";

@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { signIn } from "next-auth/react";
 import Spinner from "./Spinner";
 

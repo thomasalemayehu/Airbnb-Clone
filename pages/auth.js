@@ -3,7 +3,7 @@ import CustomHead from "../components/CustomHead";
 import { getProviders, signIn } from "next-auth/react";
 import SignInButton from "../components/SignInButton";
 import Header from "../components/Header";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useRouter } from "next/router";
 
 function Auth({ providers }) {

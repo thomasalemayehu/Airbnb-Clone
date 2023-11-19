@@ -5,7 +5,7 @@ import { useSession } from "next-auth/react";
 import { useSelector } from "react-redux";
 import { selectItems, selectTotal } from "../slices/cartSlice";
 import SearchInfoCard from "../components/SearchInfoCard";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Footer from "../components/Footer";
 import { useRouter } from "next/router";
 import { useState } from "react";

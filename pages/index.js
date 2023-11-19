@@ -1,5 +1,5 @@
 import CustomHead from "../components/CustomHead";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 import SmallCard from "../components/SmallCard";
